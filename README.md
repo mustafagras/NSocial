@@ -1,6 +1,6 @@
 # NSocial - Social Media App
 
-![image](https://github.com/mustafagras/NSocial/blob/master/assets/panel.png)
+![image](https://github.com/mustafagras/NSocial/blob/1de806154b8174281b23cb6ccfa86fd16d5f4bdd/panel.png)
 
 # 🚀 Full Stack Social Media Application with React, AspNetCore, Microsoft SQL Server ve Tailwind CSS 🌐
 
