@@ -1,0 +1,6 @@
+@NSocial.Server_HostAddress = http://localhost:5001
+
+GET {{NSocial.Server_HostAddress}}/odata/
+Accept: application/json
+
+###
