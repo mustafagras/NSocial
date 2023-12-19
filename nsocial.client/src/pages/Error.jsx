@@ -8,8 +8,8 @@ const Error = () => {
           <p className="fs-3">
             <span className="text-danger">Opps!</span> Page not found.
           </p>
-          <p className="lead">The page you’re looking for doesn’t exist.</p>
-          <Link to="/" className="bg-primary font-medium text-gray hover:bg-opacity-70">
+          <p className="lead">The page you’re looking for doesn’t exist.</p><br/>
+          <Link href="/" className="justify-center rounded bg-primary py-2 px-6 font-medium text-gray hover:bg-opacity-70">
             Go Home
           </Link>
         </div>
