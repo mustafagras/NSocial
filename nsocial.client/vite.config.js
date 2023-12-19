@@ -43,16 +43,32 @@ export default defineConfig({
             '@': fileURLToPath(new URL('./src', import.meta.url))
         }
     },
-    base: './',
+    root: './',
+    publicDir: 'public',
     build: {
-        outDir: './dist',
+        outDir: 'dist',
+        assetsDir: '',
+        assetsInlineLimit: 0,
         emptyOutDir: true,
         rollupOptions: {
             input: 'src/main.jsx',
             output: {
                 entryFileNames: 'js/[name].js',
                 chunkFileNames: 'js/[name].js',
-                assetFileNames: 'assets/[name].[ext]'
+                assetFileNames: assetInfo => {
+                    const info = assetInfo.name.split('.');
+                    const extType = info[info.length - 1];
+                    if (/\.(png|jpe?g|gif|svg|webp|webm|mp3)$/.test(assetInfo.name)) {
+                        return `images/[name].${extType}`;
+                    }
+                    if (/\.(css)$/.test(assetInfo.name)) {
+                        return `css/[name].min.${extType}`;
+                    }
+                    if (/\.(woff|woff2|eot|ttf|otf)$/.test(assetInfo.name)) {
+                        return `fonts/[name].${extType}`;
+                    }
+                    return `[name]-[hash].${extType}`;
+                }
             }
         },
         chunkSizeWarningLimit: 1000
