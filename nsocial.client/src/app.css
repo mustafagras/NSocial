@@ -1,0 +1,89 @@
+.cookieBar {
+  position: fixed;
+  z-index: 1090;
+  bottom: 24px;
+  left: 50%;
+  /* display: none;
+  visibility: hidden; */
+  width: calc(100% - 48px);
+  max-width: 630px;
+  transform: translateX(-50%);
+  -webkit-animation: fadeins 1s;
+  -moz-animation: fadeins 1s;
+  -o-animation: fadeins 1s;
+  animation: fadeins 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.cookieBar::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border-radius: 3rem;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+@media only screen and (max-width: 575px) {
+  .cookieBar::before {
+    border-radius: 15px;
+  }
+}
+
+.cookieBar__item {
+  position: relative;
+  border: 2px solid #fff;
+  border-radius: 3rem;
+  background-color: #0e152e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 575px) {
+  .cookieBar__item {
+    border-radius: 15px;
+  }
+}
+
+.cookieBar__item p {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+}
+
+.cookieBar__item a,
+.cookieBar__item button {
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.2s;
+  color: #0328ee;
+}
+
+.cookieBar__item a:hover {
+  opacity: 0.7;
+}
+
+.cookieBar__item button {
+  font-size: 10px;
+  display: block;
+  padding: 9px 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 3rem;
+  background-color: #0328ee;
+}
+
+.cookieBar__item button:hover {
+  color: #fff;
+  border-color: #0328ee;
+  background-color: #0e152e;
+}

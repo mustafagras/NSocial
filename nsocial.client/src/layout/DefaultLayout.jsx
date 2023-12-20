@@ -2,13 +2,16 @@ import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from '../components/ScrollToTop';
+import CookieBar from '../components/Default/CookieBar';
 import Header from '../components/Default/Header';
 import Footer from '../components/Default/Footer';
+import '../app.css';
 
 const DefaultLayout = () => {
   return (
     <div className="dark:bg-boxdark-2 dark:text-bodydark">
       <ScrollToTop />
+      <CookieBar />
       {/* <!-- ===== Page Wrapper Start ===== --> */}
       <div className="flex h-screen overflow-hidden">
         <ToastContainer />
