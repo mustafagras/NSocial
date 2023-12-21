@@ -1,7 +1,9 @@
 const Home = () => {
   return (
-    <h1>Home Page</h1>
-  )
-}
+    <strong>
+      <h1 className="d-flex justify-content-center">Home Page</h1>
+    </strong>
+  );
+};
 
-export default Home
+export default Home;

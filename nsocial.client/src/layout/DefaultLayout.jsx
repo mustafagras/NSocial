@@ -1,16 +1,20 @@
+import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import ScrollToTop from '../components/ScrollToTop';
 import CookieBar from '../components/Default/CookieBar';
 import Header from '../components/Default/Header';
 import Footer from '../components/Default/Footer';
+import 'react-toastify/dist/ReactToastify.css';
 import '../app.css';
 
 const DefaultLayout = () => {
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, []);
+
   return (
     <div className="dark:bg-boxdark-2 dark:text-bodydark">
-      <ScrollToTop />
       <CookieBar />
       {/* <!-- ===== Page Wrapper Start ===== --> */}
       <div className="flex h-screen overflow-hidden">
