@@ -1,3 +1,31 @@
+.paddingElem {
+  padding: var(--paddingElem);
+}
+
+.widthElem {
+  width: var(--widthElem);
+}
+
+.heightElem {
+  height: var(--heightElem);
+}
+
+.borderElem {
+  border: 0.0625rem solid var(--borderElem);
+}
+
+.footer {
+  border-top: 0.0625rem solid hsla(0, 0%, 100%, 0.1);
+}
+
+.footer__text {
+  border-top: 0.0625rem solid hsla(0, 0%, 100%, 0.07);
+}
+
+.footer__text a:hover {
+  color: #fff;
+}
+
 .cookieBar {
   position: fixed;
   z-index: 1090;
@@ -41,7 +69,7 @@
   position: relative;
   border: 2px solid #fff;
   border-radius: 3rem;
-  background-color: #0e152e;
+  background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -55,7 +83,7 @@
   font-size: 13px;
   font-weight: 500;
   line-height: 24px;
-  color: #fff;
+  color: black;
 }
 
 .cookieBar__item a,
@@ -83,7 +111,68 @@
 }
 
 .cookieBar__item button:hover {
-  color: #fff;
+  color: black;
   border-color: #0328ee;
-  background-color: #0e152e;
+  background-color: transparent;
+}
+
+.scroll {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 14px;
+  display: inline-flex;
+  flex-direction: column;
+  transition: color 0.2s;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #5e6b7e;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media only screen and (max-width: 767px) {
+  .scroll {
+    display: none;
+  }
+}
+
+.scroll__mouse {
+  position: relative;
+  width: 38px;
+  height: 64px;
+  margin-bottom: 17px;
+  border: 7px solid rgba(0, 169, 152, 0.1);
+  border-radius: 19px;
+  background: transparent;
+}
+
+.scroll__mouse:before {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 16px;
+  content: '';
+  -webkit-animation: mouse 2s linear infinite;
+  animation: mouse 2s linear infinite;
+  border-radius: 2px;
+  background: #0328ee;
+}
+
+.scroll:hover {
+  color: #0328ee;
+}
+
+.scroll_row {
+  flex-direction: row;
+}
+
+.scroll_row .scroll__mouse {
+  margin: 0 17px 0 0;
+}
+
+.main .scroll {
+  position: relative;
+  z-index: 3;
 }
